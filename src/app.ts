@@ -1,14 +1,26 @@
-import express, { Application } from 'express'
-import cors from 'cors'
-const app: Application = express()
+import express, { Application, Request, Response, NextFunction } from 'express';
+import cors from 'cors';
+import globalErrorHandler from './app/middlewares/globalErrorHandler';
+import { UserRouter } from './app/modules/user/user.route';
+import ApiError from './errors/ApiError';
+const app: Application = express();
+
+// using cors
+app.use(cors());
+
+// parse data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Application routes
 
-// using cors
-app.use(cors())
+app.use('/api/v1/users/', UserRouter);
 
-// parse data
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+// Testing
+// app.get('/', (req: Request, res: Response, next: NextFunction) => {
+//   throw new ApiError(400, 'Testing Error logger')
+// })
 
-export default app
+app.use(globalErrorHandler);
+
+export default app;

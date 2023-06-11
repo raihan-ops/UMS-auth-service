@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/media/raihan/BACKUP/NodeProject/university-management-auth-service/logs/winston/successes/.cd6238a53dc10a5cd5b14cc8ce6e3a79ae15324b-audit.json",
+    "files": [
+        {
+            "date": 1686461044639,
+            "name": "/media/raihan/BACKUP/NodeProject/university-management-auth-service/logs/winston/successes/UMAS-2023-11-06-11-success.log",
+            "hash": "369e42091fc98c6bfdf19e3fb3a666f663fa599bec51e009a25b7e7c1e2d123e"
+        },
+        {
+            "date": 1686464752263,
+            "name": "/media/raihan/BACKUP/NodeProject/university-management-auth-service/logs/winston/successes/UMAS-2023-11-06-12-success.log",
+            "hash": "ee89ca1cfe90b08fcdbc397e51a615898c9ca3b090c2b20b070114e95c9f6e08"
+        }
+    ],
+    "hashType": "sha256"
+}
